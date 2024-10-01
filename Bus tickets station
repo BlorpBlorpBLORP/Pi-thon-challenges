@@ -1,0 +1,49 @@
+bus_time = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00"]
+bus_capacity = [40, 40, 40, 40, 40, 40, 40, 64]
+bus_money = [0, 0, 0, 0, 0, 0, 0, 0]
+charge=15
+
+bus_choice = int(input("\nChoose your Bus. Please enter 09:00 [0],11:00 [2],13:00 [4] or 15:00 [6]: "))
+print("Bus time chosen:",bus_time[bus_choice])
+
+if bus_choice not in [0, 2, 4, 6]:
+    print("Not a valid bus to KL City Centre.")
+
+bus_capacity[bus_choice]= bus_capacity[bus_choice] - 1
+bus_money[bus_choice] += charge
+
+print("\nUpdated Lists")
+print("Bus Times",bus_time)
+print("Bus capacity", bus_capacity)
+print("Bus money", bus_money)
+
+bus_return = int(input("/nChoose if you are returning or not Yes [1], [2]"))
+if bus_return == 2:
+    print("Have a good trip!")
+if bus_return == 1:
+    print("Sellect following:")
+    
+    bus2_time = ["13:00", "15:00", "17:00", "19:00"]
+    bus2_capacity = [40, 40, 40, 64]
+    bus2_money = [0, 0, 0, 0]
+    
+    bus2_choice = int(input("\nChoose your Bus. Please enter 13:00 [0],15:00 [2],17:00 [4] or 19:00 [6]: "))
+    print("Bus time chosen:",bus2_time[bus_choice])
+    if bus2_choice not in [0, 2, 4, 6]:
+        print("Not a valid bus to KL City Centre.")
+    
+    bus2_capacity[bus_choice]= bus_capacity[bus_choice] - 1
+    bus2_money[bus_choice] += charge
+
+    print("\nUpdated Return LLists")
+    print("Bus Times",bus2_time)
+    print("Bus capacity", bus2_capacity)
+    print("Bus money", bus2_money)
+
+    if bus_choice not in [0, 2, 4, 6]:
+        print("Not a valid bus from KL City Centre.")
+if bus_return not in [1, 2]:
+    print("Not a valid bus from KL City Centre.")
+
+
+#Exercise 1: Add to the code above so that you can purchase a return ticket.
