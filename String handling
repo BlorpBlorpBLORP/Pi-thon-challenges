@@ -1,0 +1,28 @@
+numcol1 = [1, 1003442, 5.32222342]
+numcol2 = [5.62233, 7.364363, 9.32747474342]
+numcol3 = [9.2634526, 7.866832817, 10.781237892798]
+
+headers = ["Column 1", "Column 2", "Column 3"]
+
+def to_binary(num):
+    return bin(int(num))[2:]  
+
+print("\nLeft Justify")
+print(f"{headers[0]:<15} {headers[1]:<15} {headers[2]:<15}")
+for i in range(3):
+    print(f"{numcol1[i]:<15} {numcol2[i]:<15} {numcol3[i]:<15}")
+
+print("\nRight Justify with Fixed Decimal Points")
+print(f"{headers[0]:>15} {headers[1]:>15} {headers[2]:>15}")
+for i in range(3):
+    print(f"{numcol1[i]:>15.2f} {numcol2[i]:>15.2f} {numcol3[i]:>15.2f}")
+
+print("\nCentered with Fixed Decimal Points")
+print(f"{headers[0]:^15} {headers[1]:^15} {headers[2]:^15}")
+for i in range(3):
+    print(f"{numcol1[i]:^15.2f} {numcol2[i]:^15.2f} {numcol3[i]:^15.2f}")
+
+print("\nBinary Representation")
+print(f"{headers[0]:<15} {headers[1]:<15} {headers[2]:<15}")
+for i in range(3):
+    print(f"{to_binary(numcol1[i]):<15} {to_binary(numcol2[i]):<15} {to_binary(numcol3[i]):<15}")
