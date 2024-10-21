@@ -1,0 +1,8 @@
+MyList = ["Sword","Cat","Bag","Pizza","Bangkok"]
+print(MyList)
+NewFood = input("Add Food?")
+MyList.append(NewFood)
+print(MyList)
+NewItem = input("Add Item")
+MyList.append(NewItem)
+print(MyList)
